@@ -11,11 +11,5 @@ class UserService:
         else:
             response.raise_for_status()
 
-    def get_all_users(self):
-        response = requests.get(f"{self.base_url}/users")
-        if response.status_code == 200:
-            return response.json()
-        else:
-            response.raise_for_status()
 
 
