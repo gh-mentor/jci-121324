@@ -34,7 +34,7 @@ def gendatapoints(x_range):
     np.random.seed(0)
     x = np.random.randint(x_range[0], x_range[1], 100)
     noise = np.random.normal(0, 10, 100)
-    y = x ** 1.5 + noise
+    y = np.power(x, 1.5) + noise
     data = pd.DataFrame({'x': x, 'y': y}).sort_values('x')
     return data
 
